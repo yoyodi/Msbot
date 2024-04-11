@@ -106,7 +106,7 @@ public class ErniebotServiceImpl implements ErniebotService {
 
             int lastIndex = result.lastIndexOf("你:");
             if (lastIndex != -1) {
-                result = result.substring(lastIndex + result.length());
+                result = result.substring(lastIndex + 2);
             }
             return result;
         } catch (Exception e) {
