@@ -103,10 +103,10 @@ public class ErniebotServiceImpl implements ErniebotService {
             String result = jsonObject.getString("result");
             System.out.println(result);
 
-            int startIndex = result.indexOf("你:");
-            if (startIndex != -1) {
-                startIndex += 2;
-                result = result.substring(startIndex);
+
+            int lastIndex = result.lastIndexOf("你:");
+            if (lastIndex != -1) {
+                result = result.substring(lastIndex + result.length());
             }
             return result;
         } catch (Exception e) {
